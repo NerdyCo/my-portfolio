@@ -1,54 +1,72 @@
-.home-page {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.home-background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center 34%;
-  z-index: -1;
-}
-
-.home-content-box {
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40vh;
-  transform: none;
-  color: black;
-  font-size: 2rem;
-  padding: 10px;
+.home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 100%;
+  background-color: white;
 }
 
-.home-content-greeting {
-  font-size: 1rem;
-  font-style: italic;
-  margin: 0;
+.background-doodle {
+  height: 25%;
+  width: 25%;
+  object-fit: cover;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: block;
 }
 
-.home-content-brief-intro {
-  font-size: 1rem;
-  width: 50%;
-  text-align: center;
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 2rem;
+  gap: 50px;
+}
+
+.footer-details {
+  text-align: left;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.footer-intro {
+  font-size: 0.75rem;
+  color: black;
   line-height: 1.5;
 }
 
-.home-content-name {
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 5px;
-  margin: 1rem 0;
+.btn-cv {
+  display: inline-block;
+  color: black;
+  text-decoration: underline;
+}
+
+.footer-navigation {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-navigation .nav-item {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 4px 40px;
+  border-radius: 20px;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
 }

@@ -1,39 +1,63 @@
 import React from "react";
-import HomeImage from "../assets/images/cat.jpg";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import { images } from "../assets/images/index";
 
 import "../styles/Home.css";
 
 const Home: React.FC = () => {
   return (
-    <div className="home-page">
+    <div className="home">
       <img
-        src={HomeImage}
-        alt="Character Background"
-        className="home-background-image"
+        src={images.Doodle}
+        alt="Background Doodle"
+        className="background-doodle"
       />
 
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/about" element={null} />
-          <Route path="/projects" element={null} />
-          <Route path="/" element={null} />
-          <Route path="/contact" element={null} />
-          <Route path="/extras" element={null} />
-        </Routes>
-      </Router>
+      <div className="footer">
+        <div className="footer-details">
+          <p className="footer-title">KAUTSAR</p>
+          <p className="footer-intro">
+            JavaScript developer here—crafting efficient, secure systems with{" "}
+            <br />
+            TypeScript magic, seamless algorithms, and <br /> eye-catching
+            dynamic effects!
+          </p>
+          <a href="#" className="btn-cv">
+            Peek my CV
+          </a>
+        </div>
 
-      <div className="home-content-box">
-        <p className="home-content-greeting">Hello There, I'm</p>
-        <p className="home-content-name">KAUTSAR</p>
-        <p className="home-content-brief-intro">
-          JavaScript developer here—crafting efficient, secure systems with
-          TypeScript magic, seamless algorithms, and eye-catching dynamic
-          effects!
-        </p>
-        <div className="social-media"></div>
+        <div className="footer-navigation">
+          <a href="#" className="nav-item">
+            About
+          </a>
+          <a href="#" className="nav-item">
+            Projects
+          </a>
+          <a href="#" className="nav-item">
+            Contact
+          </a>
+          <a href="#" className="nav-item">
+            Extra
+          </a>
+        </div>
+
+        <div className="social-media">
+          <img
+            src={images.InstagramIcon}
+            alt="kautsar's instagram"
+            className="social-icon"
+          />
+          <img
+            src={images.GithubIcon}
+            alt="kautsar's github"
+            className="social-icon"
+          />
+          <img
+            src={images.LinkedinIcon}
+            alt="kautsar's linkedin"
+            className="social-icon"
+          />
+        </div>
       </div>
     </div>
   );

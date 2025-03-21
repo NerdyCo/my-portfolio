@@ -1,28 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CircleCat from "../assets/images/circle-cat.png";
+import { images } from "../assets/images";
 import "../styles/Navbar.css";
 
 const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <ul className="navbar-list">
-        <li>
-          <Link to={"/about"}>About</Link>
+        <li className="left-navbar-list">
+          <img
+            src={images.PortfolioIcon}
+            alt="kautsar's portfolio"
+            className="nav-portfolio-icon"
+          />
+          <p>Portfolio</p>
         </li>
-        <li>
-          <Link to={"/projects"}>Projects</Link>
-        </li>
-        <li>
+        <li className="center-navbar-list">
           <Link to={"/"}>
-            <img src={CircleCat} alt="Cat Logo" width="30px" />
+            <img
+              src={images.CircleCat}
+              alt="Cat Logo"
+              width="30px"
+              className="nav-cat-logo"
+            />
           </Link>
         </li>
-        <li>
-          <Link to={"/contact"}>Contact</Link>
-        </li>
-        <li>
-          <Link to={"/extras"}>Extras</Link>
+        <li className="right-navbar-list">
+          <p>Dev</p>
         </li>
       </ul>
     </nav>
