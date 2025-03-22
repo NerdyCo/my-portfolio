@@ -36,9 +36,6 @@ const Home: React.FC = () => {
           <a href="#" className="nav-item">
             Contact
           </a>
-          <a href="#" className="nav-item">
-            Extra
-          </a>
         </div>
 
         <div className="social-media">

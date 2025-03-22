@@ -1,3 +1,4 @@
+/* Base styles (shared across devices) */
 .home {
   display: flex;
   flex-direction: column;
@@ -7,36 +8,24 @@
 }
 
 .background-doodle {
-  height: 25%;
-  width: 25%;
   object-fit: cover;
   margin: 0 auto;
-  padding: 2rem 0;
   display: block;
 }
 
 .footer {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 0 2rem;
-  gap: 50px;
-}
-
-.footer-details {
-  text-align: left;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 .footer-title {
-  font-size: 1.5rem;
   font-weight: bold;
-  margin: 10px 0;
+  letter-spacing: 3px;
 }
 
 .footer-intro {
-  font-size: 0.75rem;
   color: black;
   line-height: 1.5;
 }
@@ -49,24 +38,171 @@
 
 .footer-navigation {
   display: flex;
-  gap: 18px;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.footer-navigation .nav-item {
+.nav-item {
   text-decoration: none;
   background-color: white;
   color: black;
   border: 1px solid black;
-  padding: 4px 40px;
   border-radius: 20px;
 }
 
 .social-media {
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .social-icon {
-  width: 30px;
-  height: 30px;
+  object-fit: cover;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .background-doodle {
+    height: 80%;
+    width: 80%;
+    padding: 2rem 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-details {
+    width: 90%;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 1.5rem;
+    margin: 8px 0;
+  }
+
+  .footer-intro {
+    font-size: 0.85rem;
+  }
+
+  .btn-cv {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  .footer-navigation {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav-item {
+    font-size: 0.8rem;
+    padding: 4px 15px;
+  }
+
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .background-doodle {
+    height: 60%;
+    width: 60%;
+    padding: 3rem 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-details {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 1.75rem;
+    margin: 8px 0;
+  }
+
+  .footer-intro {
+    font-size: 1rem;
+  }
+
+  .btn-cv {
+    margin: 1.5rem 0;
+  }
+
+  .footer-navigation {
+    width: 100%;
+  }
+
+  .nav-item {
+    font-size: 0.85rem;
+    padding: 4px 20px;
+  }
+
+  .social-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Laptops */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .background-doodle {
+    height: 27%;
+    width: 27%;
+    padding: 2rem 0;
+  }
+
+  .footer {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 2rem;
+    gap: 12px;
+  }
+
+  .footer-details {
+    width: 40%;
+    text-align: left;
+  }
+
+  .footer-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    letter-spacing: 4px;
+  }
+
+  .footer-intro {
+    font-size: 0.75rem;
+  }
+
+  .footer-navigation {
+    width: 40%;
+    justify-content: space-evenly;
+    gap: 12px;
+  }
+
+  .nav-item {
+    font-size: 0.8rem;
+    padding: 4px 30px;
+  }
+
+  .social-media {
+    width: 20%;
+    gap: 1.75rem;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
