@@ -16,20 +16,20 @@ const Home: React.FC = () => {
         <div className="footer-details">
           <p className="footer-title">KAUTSAR</p>
           <p className="footer-intro">
-            JavaScript developer here—crafting efficient, secure systems with{" "}
-            <br />
+            Developer here—crafting efficient, secure systems with <br />
             TypeScript magic, seamless algorithms, and <br /> eye-catching
             dynamic effects!
           </p>
-          <a href="#" className="btn-cv">
+          <a
+            href="./assets/files/kautsar_cv.pdf"
+            className="btn-cv"
+            download="Kautsar_CV.pdf"
+          >
             Peek my CV
           </a>
         </div>
 
         <div className="footer-navigation">
-          <a href="#" className="nav-item">
-            About
-          </a>
           <a href="#" className="nav-item">
             Projects
           </a>
@@ -39,21 +39,39 @@ const Home: React.FC = () => {
         </div>
 
         <div className="social-media">
-          <img
-            src={images.InstagramIcon}
-            alt="kautsar's instagram"
-            className="social-icon"
-          />
-          <img
-            src={images.GithubIcon}
-            alt="kautsar's github"
-            className="social-icon"
-          />
-          <img
-            src={images.LinkedinIcon}
-            alt="kautsar's linkedin"
-            className="social-icon"
-          />
+          <a
+            href="https://www.instagram.com/kautsarteguh/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={images.InstagramIcon}
+              alt="kautsar's instagram"
+              className="social-icon"
+            />
+          </a>
+          <a
+            href="https://github.com/NerdyCo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={images.GithubIcon}
+              alt="kautsar's github"
+              className="social-icon"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kautsarteguh/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={images.LinkedinIcon}
+              alt="kautsar's linkedin"
+              className="social-icon"
+            />
+          </a>
         </div>
       </div>
     </div>
