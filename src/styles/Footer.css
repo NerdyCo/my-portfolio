@@ -1,0 +1,16 @@
+.global-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  height: 150px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.global-footer div > p {
+  margin: 0.25rem;
+}

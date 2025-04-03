@@ -1,0 +1,62 @@
+/* Base contact's styles (shared across devices) */
+.contact {
+  padding: 0 8rem;
+  width: 100%;
+  max-width: 1440px;
+  background-color: white;
+  position: relative;
+}
+
+.contact-header {
+  margin: 1rem 0;
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+.contact-main-content {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2.5rem;
+}
+
+.contact-intro {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 40%;
+}
+
+.contact-details {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.contact-field-label {
+  color: black;
+  opacity: 0.6;
+}
+
+.contact-social-content {
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.social-icon {
+  width: 20px;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}

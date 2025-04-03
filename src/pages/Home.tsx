@@ -2,6 +2,7 @@ import React from "react";
 import { images } from "../assets/images/index";
 
 import "../styles/Home.css";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const Home: React.FC = () => {
         className="background-doodle"
       />
 
-      <div className="footer">
+      <div className="home-footer">
         <div className="footer-details">
           <p className="footer-title">KAUTSAR</p>
           <p className="footer-intro">
@@ -30,12 +31,12 @@ const Home: React.FC = () => {
         </div>
 
         <div className="footer-navigation">
-          <a href="#" className="nav-item">
+          <Link to="/projects" className="nav-item">
             Projects
-          </a>
-          <a href="#" className="nav-item">
+          </Link>
+          <Link to="/contact" className="nav-item">
             Contact
-          </a>
+          </Link>
         </div>
 
         <div className="social-media">
