@@ -1,4 +1,4 @@
-.global-footer {
+.globalFooter {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +11,14 @@
   color: white;
 }
 
-.global-footer div > p {
+.globalFooter div > p {
   margin: 0.25rem;
+  font-size: medium;
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+  .globalFooter div > p {
+    font-size: x-small;
+  }
 }

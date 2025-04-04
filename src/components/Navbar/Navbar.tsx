@@ -1,31 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { images } from "../assets/images";
-import "../styles/Navbar.css";
+import { images } from "../../assets/images";
+
+import styles from "./Navbar.module.css";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="navbar">
-      <ul className="navbar-list">
-        <li className="left-navbar-list">
+    <nav className={styles.navbar}>
+      <ul className={styles.navbarList}>
+        <li className={styles.leftNavbarList}>
           <img
             src={images.PortfolioIcon}
             alt="kautsar's portfolio"
-            className="nav-portfolio-icon"
+            className={styles.navPortfolioIcon}
           />
           <p>Portfolio</p>
         </li>
-        <li className="center-navbar-list">
+        <li className={styles.centerNavbarList}>
           <Link to={"/"}>
             <img
               src={images.CircleCat}
               alt="Cat Logo"
               width="30px"
-              className="nav-cat-logo"
+              className={styles.navCatLogo}
             />
           </Link>
         </li>
-        <li className="right-navbar-list">
+        <li className={styles.rightNavbarList}>
           <p>Dev</p>
         </li>
       </ul>

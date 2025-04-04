@@ -1,0 +1,173 @@
+/* Shared contact styles */
+.contact {
+  padding: 0 8rem;
+  width: 100%;
+  max-width: 1440px;
+  background-color: white;
+  position: relative;
+}
+
+.contactHeader {
+  margin: 1rem 0;
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+.contactMainContent {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2.5rem;
+}
+
+.contactIntro {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 40%;
+}
+
+.contactDetails {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.contactField {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.contactFieldLabel {
+  color: black;
+  opacity: 0.6;
+}
+
+.contactSocialContent {
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.socialIcon {
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.socialIcon:hover {
+  transform: scale(1.1);
+}
+
+.socialIcon {
+  width: 25px;
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+  .contact {
+    padding: 0 1rem;
+  }
+
+  .contactHeader {
+    font-size: 2rem;
+  }
+
+  .contactIntro {
+    font-size: 0.85rem;
+  }
+
+  .contactDetails {
+    gap: 8px;
+  }
+
+  .contactField:not(:first-child) {
+    margin-top: 0;
+  }
+
+  .contactFieldLabel {
+    font-size: 0.75rem;
+  }
+
+  .contactFieldValue {
+    font-size: 0.85rem;
+  }
+
+  .contactMainContent {
+    flex-direction: column;
+  }
+
+  .contactIntro,
+  .contactDetails {
+    width: 100%;
+  }
+}
+
+/* tablet shared base styles */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact {
+    padding: 0 2.5rem;
+  }
+
+  .contactMainContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contactIntro,
+  .contactDetails {
+    width: 100%;
+  }
+
+  .contactHeader {
+    font-size: 4rem;
+  }
+
+  .contactIntro {
+    font-size: 1.5rem;
+  }
+
+  .socialIcon {
+    width: 30px;
+  }
+}
+
+/* mid-range tablet */
+@media screen and (min-width: 768px) and (max-width: 899px) {
+  .contactIntro {
+    font-size: 1.5rem;
+  }
+}
+
+/* large tablet */
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+  .contactHeader {
+    margin-top: 4.5rem;
+    font-size: 7rem;
+  }
+
+  .contactIntro {
+    font-size: 1.85rem;
+  }
+
+  .contactDetails {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .contactField {
+    margin-top: 2rem;
+  }
+
+  .contactFieldLabel {
+    font-size: 1.25rem;
+  }
+
+  .contactFieldValue {
+    font-size: 1.35rem;
+  }
+
+  .contactSocialContent {
+    gap: 2.5rem;
+  }
+}

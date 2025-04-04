@@ -1,7 +1,6 @@
 import React from "react";
-import { images } from "../assets/images/index";
-
-import "../styles/Home.css";
+import { images } from "../../assets/images";
+import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
@@ -10,36 +9,37 @@ const Home: React.FC = () => {
       <img
         src={images.Doodle}
         alt="Background Doodle"
-        className="background-doodle"
+        className={styles.backgroundDoodle}
       />
 
-      <div className="home-footer">
-        <div className="footer-details">
-          <p className="footer-title">KAUTSAR</p>
-          <p className="footer-intro">
-            Developer here—crafting efficient, secure systems with <br />
-            TypeScript magic, seamless algorithms, and <br /> eye-catching
-            dynamic effects!
+      <div className={styles.homeFooter}>
+        <div className={styles.footerDetails}>
+          <p className={styles.footerTitle}>KAUTSAR</p>
+          <p className={styles.footerIntro}>
+            Developer here—crafting efficient, secure systems with{" "}
+            <br className="break-line" />
+            TypeScript magic, seamless algorithms, and{" "}
+            <br className="break-line" /> eye-catching dynamic effects!
           </p>
           <a
             href="./assets/files/kautsar_cv.pdf"
-            className="btn-cv"
+            className={styles.btnCv}
             download="Kautsar_CV.pdf"
           >
             Peek my CV
           </a>
         </div>
 
-        <div className="footer-navigation">
-          <Link to="/projects" className="nav-item">
+        <div className={styles.footerNavigation}>
+          <Link to="/projects" className={styles.navItem}>
             Projects
           </Link>
-          <Link to="/contact" className="nav-item">
+          <Link to="/contact" className={styles.navItem}>
             Contact
           </Link>
         </div>
 
-        <div className="social-media">
+        <div className={styles.socialMedia}>
           <a
             href="https://www.instagram.com/kautsarteguh/"
             target="_blank"
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
             <img
               src={images.InstagramIcon}
               alt="kautsar's instagram"
-              className="social-icon"
+              className={styles.socialIcon}
             />
           </a>
           <a
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
             <img
               src={images.GithubIcon}
               alt="kautsar's github"
-              className="social-icon"
+              className={styles.socialIcon}
             />
           </a>
           <a
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
             <img
               src={images.LinkedinIcon}
               alt="kautsar's linkedin"
-              className="social-icon"
+              className={styles.socialIcon}
             />
           </a>
         </div>

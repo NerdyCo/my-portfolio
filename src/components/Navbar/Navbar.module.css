@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.navbar-list {
+.navbarList {
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -17,35 +17,35 @@
   margin: 0;
 }
 
-.left-navbar-list {
+.leftNavbarList {
   display: flex;
   align-items: center;
 }
 
-.left-navbar-list p,
-.right-navbar-list {
+.leftNavbarList p,
+.rightNavbarList {
   font-weight: bold;
 }
 
-.nav-portfolio-icon {
+.navPortfolioIcon {
   height: 30px;
   width: 30px;
 }
 
-.center-navbar-list {
+.centerNavbarList {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav-cat-logo {
+.navCatLogo {
   height: 40px;
   width: 40px;
 }
 
 /* mobile phone */
 @media screen and (max-width: 767px) {
-  .right-navbar-list {
+  .rightNavbarList {
     display: none;
   }
 }
