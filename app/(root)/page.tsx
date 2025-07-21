@@ -1,10 +1,45 @@
 "use client";
 
+import { gsap } from "gsap";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef } from "react";
 import { TypeAnimation } from "react-type-animation";
 
-export default function Home() {
+const Home = () => {
+  const router = useRouter();
+  const curtainRef = useRef(null);
+
+  const animateCurtain = (onComplete: () => void) => {
+    gsap.to(curtainRef.current, {
+      width: "100%",
+      duration: 0.8,
+      ease: "power2.inOut",
+      onComplete: onComplete,
+    });
+  };
+
+  const handleExploreClick = () => {
+    animateCurtain(() => {
+      router.push("/workspace");
+    });
+  };
+
+  useEffect(() => {
+    gsap.fromTo(
+      curtainRef.current,
+      { width: "100%" },
+      { width: "0%", duration: 0.8, ease: "power2.inOut", delay: 0.5 }
+    );
+  }, []);
+
   return (
     <>
+      <div
+        ref={curtainRef}
+        className="fixed top-0 left-0 h-screen bg-black z-50"
+        style={{ width: "0%" }}
+      ></div>
+
       <header className="flex flex-row justify-between p-8 md:p-10 lg:p-12">
         <div>
           <img
@@ -37,10 +72,15 @@ export default function Home() {
             deletionSpeed={70}
           />
         </h1>
-        <button className="box-border bg-background text-foreground hover:bg-foreground hover:text-background border duration-300 font-semibold tracking-wider py-3 px-8 text-sm cursor-pointer">
+        <button
+          onClick={handleExploreClick}
+          className="box-border bg-background text-foreground hover:bg-foreground hover:text-background border duration-300 font-semibold tracking-wider py-3 px-8 text-sm cursor-pointer"
+        >
           Explore
         </button>
       </main>
     </>
   );
-}
+};
+
+export default Home;
