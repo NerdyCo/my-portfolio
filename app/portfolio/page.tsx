@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import Card from "@/components/Card";
+import Footer from "@/components/Footer";
 
 const Workspace = () => {
   const curtainRef = useRef(null);
@@ -45,7 +46,7 @@ const Workspace = () => {
         style={{ width: "100%" }}
       ></div>
 
-      <main className="flex flex-col pt-4 pb-5 px-10 lg:pt-0 lg:px-20">
+      <main className="flex flex-col mt-4 mx-10 lg:mt-0 lg:mx-20">
         <section>
           <h4 className="text-gray-500 text-xs md:text-sm">
             What I've done as
@@ -104,6 +105,8 @@ const Workspace = () => {
           ))}
         </section>
       </main>
+
+      <Footer />
     </>
   );
 };

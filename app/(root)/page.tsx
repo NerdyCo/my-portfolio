@@ -21,7 +21,7 @@ const Home = () => {
 
   const handleExploreClick = () => {
     animateCurtain(() => {
-      router.push("/workspace");
+      router.push("/portfolio");
     });
   };
 
