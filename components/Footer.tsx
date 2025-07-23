@@ -12,7 +12,11 @@ const Footer = () => {
           <p className="text-gray-300 text-sm">
             Curious who’s behind the code? Glimpse my journey through
             <span className="ml-1">
-              <Link href={"#"} className="underline hover:text-gray-200">
+              <Link
+                href="./pdf/CV_KautsarTeguh.pdf"
+                className="underline hover:text-gray-200"
+                download={true}
+              >
                 my CV.
               </Link>
             </span>

@@ -2,7 +2,6 @@
 
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import Image from "next/image";
 import Link from "next/link";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
@@ -105,7 +104,6 @@ const Workspace = () => {
           ))}
         </section>
       </main>
-
       <Footer />
     </>
   );
