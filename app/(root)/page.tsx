@@ -32,7 +32,7 @@ const page = () => {
         style={{ width: "0%" }}
       ></div>
 
-      <main className="flex flex-col justify-center items-center py-16 px-4 md:my-36 lg:my-auto">
+      <main className="flex flex-col justify-center items-center px-4 my-16 md:my-36 lg:my-auto">
         <h1 className="font-bold text-center text-4xl leading-tight px-4 mb-16 md:text-6xl lg:text-7xl">
           <TypeAnimation
             sequence={["Hi, I'm Teguh.", 1500, "I'm a coder.", 2000]}

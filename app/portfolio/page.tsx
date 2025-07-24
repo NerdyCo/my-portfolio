@@ -82,7 +82,7 @@ const page = () => {
               </p>
               <Link
                 className="text-xs py-2 px-5 cursor-pointer self-start uppercase border tracking-wider bg-white text-black duration-200 hover:bg-black hover:text-white lg:text-sm lg:py-3 lg:px-7"
-                href={"/portfolio/hoax-detection-system-using-machine-learning"}
+                href={"/project/hoax-detection-system-using-machine-learning"}
               >
                 VIEW DETAILS
               </Link>

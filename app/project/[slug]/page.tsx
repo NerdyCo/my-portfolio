@@ -22,7 +22,7 @@ Countering hoax technologies demands a mix of education, skepticism, and stronge
 `;
 
   return (
-    <main className="px-8 py-2">
+    <main className="px-8 my-5">
       <section className="flex flex-col gap-8">
         <Image
           height={500}
