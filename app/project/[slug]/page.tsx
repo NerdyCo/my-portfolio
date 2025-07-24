@@ -5,7 +5,7 @@ import React from "react";
 const page = () => {
   const myMarkdownText = `
   # test
-**The Allure of Hoax Technologies**  
+**The Allure of Hoax Technologies**
 Hoax technologies captivate the public by exploiting our fascination with groundbreaking advancements. These fabricated or exaggerated claims about devices, software, or systems promise revolutionary capabilities but ultimately fail to deliver. From historical scams like the 19th-century "Keely Motor," which falsely claimed to harness free energy, to modern fake AI breakthroughs, hoax technologies blend overzealous marketing, misinformation, and outright fraud. They prey on curiosity and trust, offering solutions that seem too good to be true—because they are. Today’s digital landscape, with its viral reach, amplifies these deceptions, making them more pervasive and persuasive than ever before.
 
 **The Mechanics of Deception**  
