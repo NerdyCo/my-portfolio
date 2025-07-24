@@ -1,12 +1,11 @@
 "use client";
 
-import Header from "@/components/Header";
 import { gsap } from "gsap";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { TypeAnimation } from "react-type-animation";
 
-const Home = () => {
+const page = () => {
   const router = useRouter();
   const curtainRef = useRef(null);
 
@@ -54,4 +53,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default page;

@@ -6,7 +6,7 @@ import Link from "next/link";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
 
-const Workspace = () => {
+const page = () => {
   const curtainRef = useRef(null);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ const Workspace = () => {
               </p>
               <Link
                 className="text-xs py-2 px-5 cursor-pointer self-start uppercase border tracking-wider bg-white text-black duration-200 hover:bg-black hover:text-white lg:text-sm lg:py-3 lg:px-7"
-                href={"#"}
+                href={"/portfolio/hoax-detection-system-using-machine-learning"}
               >
                 VIEW DETAILS
               </Link>
@@ -90,7 +90,6 @@ const Workspace = () => {
           </div>
         </section>
 
-        {/* =========== */}
         <section className="grid grid-cols-1 gap-10 mt-16 mb-8 md:grid-cols-2">
           {projects.map(({ url, alt, category, title, description }, index) => (
             <Card
@@ -109,4 +108,4 @@ const Workspace = () => {
   );
 };
 
-export default Workspace;
+export default page;
