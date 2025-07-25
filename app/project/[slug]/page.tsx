@@ -4,22 +4,76 @@ import React from "react";
 
 const page = () => {
   const myMarkdownText = `
-  # test
-**The Allure of Hoax Technologies**
-Hoax technologies captivate the public by exploiting our fascination with groundbreaking advancements. These fabricated or exaggerated claims about devices, software, or systems promise revolutionary capabilities but ultimately fail to deliver. From historical scams like the 19th-century "Keely Motor," which falsely claimed to harness free energy, to modern fake AI breakthroughs, hoax technologies blend overzealous marketing, misinformation, and outright fraud. They prey on curiosity and trust, offering solutions that seem too good to be true—because they are. Today’s digital landscape, with its viral reach, amplifies these deceptions, making them more pervasive and persuasive than ever before.
+Artificial Intelligence (AI) has come a long way — but now, it's not just about smart speakers or chess bots. In 2025, **AI Agents** are making waves by becoming *everyday assistants* inside our favorite apps. 💡
+From chat apps to shopping platforms, these tiny virtual brains are transforming how we interact with software. Let’s dive into how this works and why it’s such a big deal.
 
-**The Mechanics of Deception**  
-Hoax technologies rely on polished presentations and pseudoscientific jargon to appear legitimate. Creators craft convincing narratives using slick websites, staged demos, or manipulated data to mislead investors and consumers. A notorious example is the early 2000s "ITBox," a supposed supercomputer revealed to be a hollow shell with blinking lights. Social media platforms, particularly through viral marketing, accelerate the spread of these hoaxes, as sensational claims rack up attention before scrutiny can catch up. The general public’s limited technical expertise creates a gap that fraudsters exploit, cloaking their schemes in a veneer of credibility that’s difficult to challenge without specialized knowledge.
+## 🚀 What Are AI Agents?
 
-**The Consequences of Belief**  
-The impact of hoax technologies extends beyond financial losses to erode trust in legitimate innovation. High-profile cases like Theranos, which falsely claimed to revolutionize blood testing, led to millions in losses and legal battles after its deception was exposed. Such hoaxes foster skepticism toward genuine scientific advancements, slowing progress in critical fields like renewable energy or medical technology. Resources wasted on fake solutions can delay real-world applications, such as climate change mitigation or healthcare improvements. The ripple effect undermines confidence in technology, making it harder for authentic innovators to gain traction.
+AI Agents are like mini-AIs that can act *autonomously* inside applications. They can:
 
-**Modern Examples and Red Flags**  
-Today’s hoax technologies often hide behind trendy buzzwords like "quantum," "blockchain," or "AI-driven." Fake AI tools claiming to predict stock markets with perfect accuracy, for instance, lure users into subscription traps or data theft schemes. Dubious gadgets, like "health bands" promoted on platforms like X for curing diseases through vague "frequency therapy," are frequently debunked by experts. Red flags include unrealistic promises, lack of peer-reviewed evidence, and secretive claims that resist independent verification. Recognizing these signs—overhyped benefits, missing prototypes, or unverifiable endorsements—is essential for avoiding deception in an era of flashy tech scams.
+- Understand your goals or tasks 🤔
+- Make decisions and take actions 🛠️
+- Learn from interactions and improve over time 📈
 
-**Combating Hoax Technologies**  
-Countering hoax technologies demands a mix of education, skepticism, and stronger regulation. Public awareness campaigns can equip consumers to question extraordinary claims and seek credible evidence. Platforms like X can amplify expert voices to debunk misinformation but must also limit the spread of deceptive tech ads. Regulatory bodies should enforce stricter oversight of tech startups, particularly those seeking public investment, to ensure transparency. Promoting open-source validation and peer review can expose fraudulent claims early. By fostering critical thinking and a culture of evidence-based scrutiny, society can better navigate the deceptive allure of hoax technologies, preserving trust in genuine innovation.
-`;
+Think of them as "little ChatGPTs" trained specifically to do one thing *really well* inside your app.
+
+## 📱 Real-World Examples in 2025
+
+Here are a few places where AI agents are popping up:
+
+### 1. **Messaging Apps**
+Apps like WhatsApp and Telegram now include smart agents that:
+- Suggest replies ✍️
+- Schedule meetings automatically 📆
+- Translate conversations on-the-fly 🌐
+
+### 2. **E-commerce Platforms**
+On sites like Amazon or Tokopedia:
+- AI agents recommend products based on behavior 🛍️
+- Help with returns or delivery tracking 📦
+- Chat support is now *fully autonomous* 🤯
+
+### 3. **Productivity Tools**
+Apps like Notion, Obsidian, and even VSCode have AI agents that:
+- Write documentation 📝
+- Refactor code 🧠
+- Manage daily to-dos ✅
+
+## 🧠 How Do They Work?
+
+Most AI agents are powered by **Large Language Models (LLMs)** like GPT-4 or Claude, combined with:
+
+- **Memory** to track context and user preferences
+- **APIs** to interact with external services (e.g., your calendar or email)
+- **Rules or goals** that guide their behavior
+
+It’s like giving your app a *brain, memory, and hands* to do stuff for you!
+
+## 🛑 Risks & Challenges
+
+While cool, AI agents also bring risks:
+
+- **Privacy concerns** — they often need access to sensitive data 🔐
+- **Over-automation** — what if the agent misinterprets something? ⚠️
+- **Bias & fairness** — agents must be well-trained to avoid harmful behavior 🙅‍♂️
+
+Developers must be responsible and transparent when integrating agents.
+
+## 🔮 The Future: AI That Feels Personal
+
+In the near future, your AI agent might know you *better than your friends do*. Whether you're coding, shopping, or just chatting, you'll have a personal assistant that *feels like magic*. 🧙‍♂️✨
+
+> *“The best interface is no interface — just an AI that gets you.”*
+
+## 👨‍💻 Final Thoughts
+
+AI agents aren’t just a trend — they’re becoming the **default way** we interact with apps. If you're a developer, this is the *next frontier*. If you're a user, get ready to work smarter, not harder. 😉
+
+*Written by: Kautsar Teguh Dwi Putra 🧑‍💻  
+July 24, 2025*
+
+
+ `;
 
   return (
     <main className="px-8 my-5">

@@ -11,7 +11,7 @@ const MarkDownRenderer = async ({ markdown }: MarkDownRendererProps) => {
 
   return (
     <div
-      className="text-black/60 font-medium text-sm leading-6"
+      className="text-black/60 font-medium text-sm leading-relaxed prose md:prose-lg text-left"
       dangerouslySetInnerHTML={{ __html: contentHtml }}
     />
   );
