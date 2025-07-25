@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = ({ url, alt, category, title, description }: any) => {
+const WideCard = ({ url, alt, category, title, description }: any) => {
   return (
     <div className="flex flex-col mb-5">
       <div>
@@ -29,4 +29,4 @@ const Card = ({ url, alt, category, title, description }: any) => {
   );
 };
 
-export default Card;
+export default WideCard;

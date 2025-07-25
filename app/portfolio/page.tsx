@@ -3,7 +3,7 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
-import Card from "@/components/Card";
+import WideCard from "@/components/WideCard";
 import Footer from "@/components/Footer";
 
 const page = () => {
@@ -92,7 +92,7 @@ const page = () => {
 
         <section className="grid grid-cols-1 gap-10 mt-16 mb-8 md:grid-cols-2">
           {projects.map(({ url, alt, category, title, description }, index) => (
-            <Card
+            <WideCard
               key={index}
               url={url}
               alt={alt}

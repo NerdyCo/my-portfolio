@@ -1,6 +1,8 @@
+import Card from "@/components/WideCard";
 import MarkDownRenderer from "@/components/MarkDownRenderer";
 import Image from "next/image";
 import React from "react";
+import SuggestionCard from "@/components/SuggestionCard";
 
 const page = () => {
   const myMarkdownText = `
@@ -76,45 +78,56 @@ July 24, 2025*
  `;
 
   return (
-    <main className="px-8 my-5">
-      <section className="flex flex-col gap-8">
-        <Image
-          height={500}
-          width={500}
-          src={"/images/js.png"}
-          alt="Banner"
-          className=" rounded-3xl object-cover object-center"
-        />
-        <h1 className="text-2xl font-bold text-black/80">
-          Hoax Detection System Using Machine Learning
-        </h1>
-      </section>
-
-      <section>
-        <div className="my-7 px-1 flex flex-row items-center justify-between">
-          <div className="flex flex-row gap-3 mt-1">
-            <Image
-              height={48}
-              width={48}
-              src={"/images/avatar.jpg"}
-              alt="Profile Picture"
-              className="rounded-full object-cover object-center"
-            />
-            <div className="flex flex-col gap-0.5 justify-center">
-              <h6 className="text-sm font-semibold text-black/55">Thesis</h6>
-              <p className="text-xs font-semibold text-black/40">Junior Dev</p>
+    <main className="px-8 my-10 flex flex-col gap-8">
+      <div>
+        <section className="flex flex-col gap-8">
+          <Image
+            height={500}
+            width={500}
+            src={"/images/js.png"}
+            alt="Banner"
+            className="rounded-3xl object-cover object-center"
+          />
+          <h1 className="text-2xl font-bold text-black/80">
+            Hoax Detection System Using Machine Learning
+          </h1>
+        </section>
+        <section>
+          <div className="my-7 px-1 flex flex-row items-center justify-between">
+            <div className="flex flex-row gap-3 mt-1">
+              <Image
+                height={48}
+                width={48}
+                src={"/images/avatar.jpg"}
+                alt="Profile Picture"
+                className="rounded-full object-cover object-center"
+              />
+              <div className="flex flex-col gap-0.5 justify-center">
+                <h6 className="text-sm font-semibold text-black/55">Thesis</h6>
+                <p className="text-xs font-semibold text-black/40">
+                  Junior Dev
+                </p>
+              </div>
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-black/40">
+                Feb - Mar, 2019
+              </p>
             </div>
           </div>
-          <div>
-            <p className="text-xs font-semibold text-black/40">
-              Feb - Mar, 2019
-            </p>
+          <div className="my-7">
+            <MarkDownRenderer markdown={myMarkdownText} />
           </div>
+        </section>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-bold mb-4">Other Projects</h3>
+        <div className="flex flex-col gap-3">
+          <SuggestionCard />
+          <SuggestionCard />
         </div>
-        <div className="my-7">
-          <MarkDownRenderer markdown={myMarkdownText} />
-        </div>
-      </section>
+      </div>
     </main>
   );
 };
