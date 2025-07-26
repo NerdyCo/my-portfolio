@@ -4,7 +4,7 @@ import React from "react";
 
 const SuggestionCard = () => {
   return (
-    <div className="bg-black/10 rounded-xl p-3 flex flex-row gap-4 items-center">
+    <div className="bg-white rounded-xl p-3 md:p-7 flex flex-row gap-4 items-center">
       <div>
         <Image
           alt="thumbnail"
@@ -15,10 +15,13 @@ const SuggestionCard = () => {
         />
       </div>
       <div className="flex flex-col gap-3">
-        <Link href={"#"} className="text-sm font-bold hover:underline">
+        <Link
+          href={"#"}
+          className="text-sm md:text-xl font-bold hover:underline"
+        >
           Desktop Archive Management for Cilandak District Office
         </Link>
-        <p className="text-xs text-black/40 font-bold">Java</p>
+        <p className="text-xs md:text-sm text-black/40 font-bold">Java</p>
       </div>
     </div>
   );

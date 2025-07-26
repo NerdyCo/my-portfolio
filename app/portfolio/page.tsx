@@ -22,7 +22,7 @@ const page = () => {
     {
       url: "/images/java.png",
       alt: "",
-      category: "Java",
+      category: ["Java"],
       title: "Desktop Archive Management for Cilandak District Office",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque placeat quia totam repellat atque, optio quidem quo sed quos illum dolores laudantium qui rem aspernatur accusantium quaerat ex omnis?",
@@ -30,7 +30,7 @@ const page = () => {
     {
       url: "/images/mobile.png",
       alt: "",
-      category: "Wordpress | Flutterflow | Supabase",
+      category: ["Wordpress", " Flutterflow", "Supabase"],
       title: "Humanitarian App & Website for CNT IT Corporation",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque placeat quia totam repellat atque, optio quidem quo sed quos illum dolores laudantium qui rem aspernatur accusantium quaerat ex omnis?",

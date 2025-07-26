@@ -1,0 +1,11 @@
+.responsive-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+@media (min-width: 640px) {
+  .responsive-image {
+    max-width: 1000px;
+  }
+}

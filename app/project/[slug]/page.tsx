@@ -86,14 +86,14 @@ July 24, 2025*
             width={500}
             src={"/images/js.png"}
             alt="Banner"
-            className="rounded-3xl object-cover object-center"
+            className="rounded-3xl object-cover object-center responsive-image"
           />
-          <h1 className="text-2xl font-bold text-black/80">
+          <h1 className="text-2xl md:text-5xl font-bold text-black/80">
             Hoax Detection System Using Machine Learning
           </h1>
         </section>
         <section>
-          <div className="my-7 px-1 flex flex-row items-center justify-between">
+          <div className="my-7 md:mb-16 px-1 flex flex-row items-center justify-between md:justify-start md:gap-6">
             <div className="flex flex-row gap-3 mt-1">
               <Image
                 height={48}
@@ -103,8 +103,10 @@ July 24, 2025*
                 className="rounded-full object-cover object-center"
               />
               <div className="flex flex-col gap-0.5 justify-center">
-                <h6 className="text-sm font-semibold text-black/55">Thesis</h6>
-                <p className="text-xs font-semibold text-black/40">
+                <h6 className="text-sm md:text-base font-semibold text-black/55">
+                  Thesis
+                </h6>
+                <p className="text-xs md:text-sm font-semibold text-black/40">
                   Junior Dev
                 </p>
               </div>
@@ -121,9 +123,11 @@ July 24, 2025*
         </section>
       </div>
 
-      <div>
-        <h3 className="text-xl font-bold mb-4">Other Projects</h3>
-        <div className="flex flex-col gap-3">
+      <div className="bg-gray-300/30 p-4 rounded-lg">
+        <h3 className="text-xl md:text-3xl font-bold mt-1 mb-8">
+          Other Projects
+        </h3>
+        <div className="flex flex-col gap-5">
           <SuggestionCard />
           <SuggestionCard />
         </div>
