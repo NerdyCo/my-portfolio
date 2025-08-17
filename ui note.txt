@@ -1,0 +1,9 @@
+font: roboto mono
+
+margin (main page) = 120px
+
+[font size, font weight]
+text normal = 16px regular/medium
+main title= 76px bold
+ - 48px bold
+
