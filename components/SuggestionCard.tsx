@@ -21,7 +21,7 @@ const SuggestionCard = () => {
         >
           Desktop Archive Management for Cilandak District Office
         </Link>
-        <p className="text-xs md:text-sm text-black/40 font-bold">Java</p>
+        <p className="text-xs md:text-sm text-gray-500 font-bold">Java</p>
       </div>
     </div>
   );

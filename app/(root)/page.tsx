@@ -20,7 +20,7 @@ const page = () => {
 
   const handleExploreClick = () => {
     animateCurtain(() => {
-      router.push("/portfolio");
+      router.push("/workspace");
     });
   };
 
@@ -39,7 +39,7 @@ const page = () => {
 
         <button
           onClick={handleExploreClick}
-          className="mt-16 border border-foreground py-2 px-9 text-sm font-medium uppercase tracking-widest transition-colors duration-300 hover:bg-foreground hover:text-background md:mt-24"
+          className="mt-16 border border-foreground py-2 px-9 text-sm font-medium uppercase tracking-widest transition-colors duration-300 hover:bg-foreground hover:text-background md:mt-24 hover:cursor-pointer"
         >
           Explore
         </button>

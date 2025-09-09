@@ -71,7 +71,7 @@ const page = () => {
 
       <main className="mx-auto flex w-full max-w-7xl flex-col mb-10 lg:mb-16">
         <section className="mb-6 lg:mb-12">
-          <h4 className="text-black/60 text-xs md:text-sm lg:text-base font-semibold mb-2">
+          <h4 className="text-gray-500 text-xs md:text-sm lg:text-base font-semibold mb-2">
             What I've done as
           </h4>
           <h1 className="text-black text-3xl font-bold uppercase md:text-4xl lg:text-5xl">
@@ -97,14 +97,14 @@ const page = () => {
               </h2>
             </div>
             <div className="flex flex-col gap-5">
-              <p className="text-sm leading-relaxed text-gray-600 md:text-base">
+              <p className="text-sm leading-relaxed text-gray-500 md:text-base">
                 Created a Chromium extension to detect misinformation on
                 Platform X, integrating GPT-based LLM for automated
                 fact-checking.
               </p>
               <Link
                 className="self-start border bg-white px-5 py-2 text-xs font-medium uppercase tracking-wider text-black transition-colors duration-200 hover:bg-black hover:text-white lg:px-7 lg:py-3 lg:text-sm"
-                href={"/portfolio/hoax-detection-system-using-machine-learning"}
+                href={"/workspace/hoax-detection-system-using-machine-learning"}
               >
                 VIEW DETAILS
               </Link>
