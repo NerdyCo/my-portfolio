@@ -32,8 +32,8 @@ const page = () => {
         style={{ width: "0%" }}
       ></div>
 
-      <main className="flex flex-1 flex-col items-center justify-center p-4">
-        <h1 className="text-4xl font-bold leading-tight md:text-6xl lg:text-7xl">
+      <main className="flex flex-1 flex-col items-center justify-center">
+        <h1 className="text-center text-4xl font-bold leading-tight md:text-6xl lg:text-7xl">
           Hi, I'm Teguh. I'm a coder
         </h1>
 

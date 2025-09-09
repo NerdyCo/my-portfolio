@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="flex flex-row justify-between p-8 md:p-10 lg:p-12">
+    <header className="flex flex-row justify-between py-8 md:py-12">
       <div>
         <img
           width="24"
