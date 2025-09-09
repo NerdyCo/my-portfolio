@@ -1,4 +1,3 @@
-import Card from "@/components/WideCard";
 import MarkDownRenderer from "@/components/MarkDownRenderer";
 import Image from "next/image";
 import React from "react";

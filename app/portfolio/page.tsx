@@ -7,16 +7,16 @@ import WideCard from "@/components/WideCard";
 import Footer from "@/components/Footer";
 
 const page = () => {
-  // const curtainRef = useRef(null);
+  const curtainRef = useRef(null);
 
-  // useEffect(() => {
-  //   gsap.to(curtainRef.current, {
-  //     width: "0%",
-  //     duration: 0.8,
-  //     ease: "power2.inOut",
-  //     delay: 0.2,
-  //   });
-  // }, []);
+  useEffect(() => {
+    gsap.to(curtainRef.current, {
+      width: "0%",
+      duration: 0.8,
+      ease: "power2.inOut",
+      delay: 0.2,
+    });
+  }, []);
 
   const projects = [
     {
@@ -63,13 +63,13 @@ const page = () => {
 
   return (
     <>
-      {/* <div
+      <div
         ref={curtainRef}
         className="fixed top-0 right-0 h-screen bg-black z-50"
         style={{ width: "100%" }}
-      ></div> */}
+      ></div>
 
-      <main className="mx-auto flex w-full max-w-7xl flex-col">
+      <main className="mx-auto flex w-full max-w-7xl flex-col mb-10 lg:mb-16">
         <section className="mb-6 lg:mb-12">
           <h4 className="text-black/60 text-xs md:text-sm lg:text-base font-semibold mb-2">
             What I've done as
@@ -79,7 +79,7 @@ const page = () => {
           </h1>
         </section>
 
-        <section className="flex flex-col gap-8 md:flex-row md:items-center lg:gap-12 mb-16">
+        <section className="flex flex-col gap-8 md:flex-row md:items-center lg:gap-12 mb-16 lg:mb-24">
           <div className="flex justify-center md:w-1/2">
             <img
               src="/images/js.png"
@@ -104,7 +104,7 @@ const page = () => {
               </p>
               <Link
                 className="self-start border bg-white px-5 py-2 text-xs font-medium uppercase tracking-wider text-black transition-colors duration-200 hover:bg-black hover:text-white lg:px-7 lg:py-3 lg:text-sm"
-                href={"/project/hoax-detection-system-using-machine-learning"}
+                href={"/portfolio/hoax-detection-system-using-machine-learning"}
               >
                 VIEW DETAILS
               </Link>

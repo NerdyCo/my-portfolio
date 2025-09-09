@@ -1,3 +1,5 @@
+import "./styles.css";
+
 const layout = ({
   children,
 }: Readonly<{
