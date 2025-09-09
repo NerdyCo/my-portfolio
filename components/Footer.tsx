@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="bg-gray-900 rounded-2xl p-8 flex flex-col md:flex-row md:p-12 items-center justify-between relative overflow-hidden">
-        <div className="flex flex-col gap-4 w-full md:w-2/5 md:text-left">
+        <div className="flex flex-col gap-4 w-full md:w-3/6 md:text-left">
           <h2 className="text-white text-2xl md:text-3xl font-semibold leading-tight">
             Wanna team up?
           </h2>

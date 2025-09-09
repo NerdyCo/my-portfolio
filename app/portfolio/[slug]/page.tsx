@@ -1,80 +1,46 @@
-import MarkDownRenderer from "@/components/MarkDownRenderer";
 import Image from "next/image";
 import React from "react";
 import SuggestionCard from "@/components/SuggestionCard";
+import PortableTextRenderer from "@/components/PortableTextRenderer";
 
 const page = () => {
-  const myMarkdownText = `
-Artificial Intelligence (AI) has come a long way — but now, it's not just about smart speakers or chess bots. In 2025, **AI Agents** are making waves by becoming *everyday assistants* inside our favorite apps. 💡
-From chat apps to shopping platforms, these tiny virtual brains are transforming how we interact with software. Let’s dive into how this works and why it’s such a big deal.
-
-## 🚀 What Are AI Agents?
-
-AI Agents are like mini-AIs that can act *autonomously* inside applications. They can:
-
-- Understand your goals or tasks 🤔
-- Make decisions and take actions 🛠️
-- Learn from interactions and improve over time 📈
-
-Think of them as "little ChatGPTs" trained specifically to do one thing *really well* inside your app.
-
-## 📱 Real-World Examples in 2025
-
-Here are a few places where AI agents are popping up:
-
-### 1. **Messaging Apps**
-Apps like WhatsApp and Telegram now include smart agents that:
-- Suggest replies ✍️
-- Schedule meetings automatically 📆
-- Translate conversations on-the-fly 🌐
-
-### 2. **E-commerce Platforms**
-On sites like Amazon or Tokopedia:
-- AI agents recommend products based on behavior 🛍️
-- Help with returns or delivery tracking 📦
-- Chat support is now *fully autonomous* 🤯
-
-### 3. **Productivity Tools**
-Apps like Notion, Obsidian, and even VSCode have AI agents that:
-- Write documentation 📝
-- Refactor code 🧠
-- Manage daily to-dos ✅
-
-## 🧠 How Do They Work?
-
-Most AI agents are powered by **Large Language Models (LLMs)** like GPT-4 or Claude, combined with:
-
-- **Memory** to track context and user preferences
-- **APIs** to interact with external services (e.g., your calendar or email)
-- **Rules or goals** that guide their behavior
-
-It’s like giving your app a *brain, memory, and hands* to do stuff for you!
-
-## 🛑 Risks & Challenges
-
-While cool, AI agents also bring risks:
-
-- **Privacy concerns** — they often need access to sensitive data 🔐
-- **Over-automation** — what if the agent misinterprets something? ⚠️
-- **Bias & fairness** — agents must be well-trained to avoid harmful behavior 🙅‍♂️
-
-Developers must be responsible and transparent when integrating agents.
-
-## 🔮 The Future: AI That Feels Personal
-
-In the near future, your AI agent might know you *better than your friends do*. Whether you're coding, shopping, or just chatting, you'll have a personal assistant that *feels like magic*. 🧙‍♂️✨
-
-> *“The best interface is no interface — just an AI that gets you.”*
-
-## 👨‍💻 Final Thoughts
-
-AI agents aren’t just a trend — they’re becoming the **default way** we interact with apps. If you're a developer, this is the *next frontier*. If you're a user, get ready to work smarter, not harder. 😉
-
-*Written by: Kautsar Teguh Dwi Putra 🧑‍💻  
-July 24, 2025*
-
-
- `;
+  const mySanityContent = [
+    {
+      _key: "abc1",
+      _type: "block",
+      style: "h1",
+      children: [
+        {
+          _key: "1",
+          _type: "span",
+          text: "Artificial Intelligence (AI) has come a long way",
+        },
+      ],
+    },
+    {
+      _key: "abc2",
+      _type: "block",
+      style: "normal",
+      children: [
+        {
+          _key: "2",
+          _type: "span",
+          text: "— but now, it's not just about smart speakers or chess bots. In 2025, ",
+        },
+        {
+          _key: "3",
+          _type: "span",
+          text: "AI Agents",
+          marks: ["strong"],
+        },
+        {
+          _key: "4",
+          _type: "span",
+          text: " are making waves by becoming everyday assistants inside our favorite apps. From chat apps to shopping platforms, these tiny virtual brains are transforming how we interact with software. Let’s dive into how this works and why it’s such a big deal.",
+        },
+      ],
+    },
+  ];
 
   return (
     <main className="px-8 my-10 flex flex-col gap-8">
@@ -117,11 +83,11 @@ July 24, 2025*
             </div>
           </div>
           <div className="my-7">
-            <MarkDownRenderer markdown={myMarkdownText} />
+            {/* Mengganti MarkDownRenderer dengan komponen baru */}
+            <PortableTextRenderer content={mySanityContent} />
           </div>
         </section>
       </div>
-
       <div className="bg-gray-300/30 p-4 rounded-lg">
         <h3 className="text-xl md:text-3xl font-bold mt-1 mb-8">
           Other Projects
