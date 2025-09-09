@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import PortableTextRenderer from "@/components/PortableTextRenderer";
-import SuggestionCard from "@/components/SuggestionCard";
+import WideCard from "@/components/WideCard";
 
 const page = () => {
   const hardcodedProjectData = {
@@ -92,11 +92,30 @@ const page = () => {
     return date.toLocaleDateString("en-US", options);
   };
 
+  const projects = [
+    {
+      url: "/images/java.png",
+      alt: "",
+      projectType: "Freelance",
+      title: "Desktop Archive Management for Cilandak District Office",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque placeat quia totam repellat atque, optio quidem quo sed quos illum dolores laudantium qui rem aspernatur accusantium quaerat ex omnis?",
+    },
+    {
+      url: "/images/mobile.png",
+      alt: "",
+      projectType: "Freelance",
+      title: "Humanitarian App & Website for CNT IT Corporation",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque placeat quia totam repellat atque, optio quidem quo sed quos illum dolores laudantium qui rem aspernatur accusantium quaerat ex omnis?",
+    },
+  ];
+
   return (
     <main>
-      <section>
-        <h1 className="text-4xl font-semibold text-center">{title}</h1>
-        <div className="flex flex-wrap gap-2 my-8 justify-center items-center">
+      <section className="mb-5">
+        <h1 className="text-4xl text-black font-medium text-center">{title}</h1>
+        <div className="flex flex-wrap gap-2 my-10 justify-center items-center">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -106,32 +125,29 @@ const page = () => {
             </span>
           ))}
         </div>
-        <div className="">
+        <div className="h-[220px] w-full relative">
           <Image
             src="/images/mobile.png"
             alt="Banner"
-            width={400}
-            height={400}
-            className="rounded-xl h-[220px] w-full cover object-cover"
+            fill
+            className="rounded-xl object-cover"
           />
         </div>
       </section>
 
-      <section>
-        <div className="">
-          <div className="">
-            <p className="">Company</p>
-            <h6 className="">{companyName}</h6>
-          </div>
-          <div className="">
-            <p className="">Duration</p>
-            <p className="">
-              {formatDate(startDate)} - {formatDate(endDate)}
+      <section className="mb-12">
+        <div className="flex flex-col gap-5 mb-10">
+          <div>
+            <h4 className="text-gray-500 text-sm mb-2">Company</h4>
+            <p className="text-black text-base">
+              {companyName} <span className="font-bold">AS</span> {jobPosition}
             </p>
           </div>
-          <div className="">
-            <p className="">Job Position</p>
-            <p className="">{jobPosition}</p>
+          <div>
+            <h4 className="text-gray-500 text-sm mb-2">Duration</h4>
+            <p className="text-black text-base">
+              {formatDate(startDate)} - {formatDate(endDate)}
+            </p>
           </div>
         </div>
         <div className="">
@@ -139,16 +155,27 @@ const page = () => {
         </div>
       </section>
 
-      <section className="">
-        <div className="">
-          <h3 className="">Other Projects</h3>
-          <div className="">
-            <SuggestionCard />
-            <SuggestionCard />
-            <SuggestionCard />
+      <div className="bg-gray-200/50 -mx-8 sm:-mx-12 md:-mx-16 lg:-mx-20 xl:-mx-32 py-8">
+        <section className="px-8 sm:px-12 md:px-16 lg:px-20">
+          <h3 className="text-black text-3xl font-bold mb-10">
+            Other Projects
+          </h3>
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map(
+              ({ url, alt, projectType, title, description }, index) => (
+                <WideCard
+                  key={index}
+                  url={url}
+                  alt={alt}
+                  projectType={projectType}
+                  title={title}
+                  description={description}
+                />
+              )
+            )}
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 };
