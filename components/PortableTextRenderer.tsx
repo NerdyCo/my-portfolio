@@ -10,7 +10,6 @@ const PortableTextRenderer = ({ content }: PortableTextProps) => {
 
   const components = {
     block: {
-      // Hapus semua kelas di sini, biarkan prose yang mengaturnya
       normal: ({ children }: any) => <p>{children}</p>,
       h1: ({ children }: any) => <h1>{children}</h1>,
       h2: ({ children }: any) => <h2>{children}</h2>,
