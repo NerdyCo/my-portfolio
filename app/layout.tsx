@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import "./globals.css";
 import { Roboto_Mono } from "next/font/google";
 
@@ -15,11 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={robotoMono.variable}>
-      <body className="px-8 md:px-10 lg:px-12 xl:px-32">
-        <Header />
-
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

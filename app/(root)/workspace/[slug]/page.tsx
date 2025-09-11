@@ -114,7 +114,9 @@ const page = () => {
   return (
     <main>
       <section className="mb-5">
-        <h1 className="text-4xl text-black font-medium text-center">{title}</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl text-black font-medium text-center">
+          {title}
+        </h1>
         <div className="flex flex-wrap gap-2 my-10 justify-center items-center">
           {tags.map((tag) => (
             <span
@@ -125,7 +127,7 @@ const page = () => {
             </span>
           ))}
         </div>
-        <div className="h-[220px] w-full relative">
+        <div className="h-[220px] md:h-[300px] lg:h-[500px] xl:h-[600px] w-full relative">
           <Image
             src="/images/mobile.png"
             alt="Banner"
@@ -135,22 +137,22 @@ const page = () => {
         </div>
       </section>
 
-      <section className="mb-12">
-        <div className="flex flex-col gap-5 mb-10">
+      <section className="lg:flex lg:flex-row lg:gap-12 mb-12 lg:mt-12">
+        <div className="flex flex-row lg:flex-col max-lg:justify-between gap-5 mb-10">
           <div>
             <h4 className="text-gray-500 text-sm mb-2">Company</h4>
-            <p className="text-black text-base">
+            <p className="text-black text-sm md:text-base">
               {companyName} <span className="font-bold">AS</span> {jobPosition}
             </p>
           </div>
           <div>
-            <h4 className="text-gray-500 text-sm mb-2">Duration</h4>
-            <p className="text-black text-base">
+            <h4 className="text-gray-500 text-sm mb-2">Duration Job</h4>
+            <p className="text-black text-sm md:text-base">
               {formatDate(startDate)} - {formatDate(endDate)}
             </p>
           </div>
         </div>
-        <div className="">
+        <div className="prose md:prose-lg">
           <PortableTextRenderer content={content} />
         </div>
       </section>

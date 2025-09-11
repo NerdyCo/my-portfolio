@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import Link from "next/link";
 import WideCard from "@/components/WideCard";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 const page = () => {
   const curtainRef = useRef(null);
@@ -24,30 +25,6 @@ const page = () => {
       alt: "",
       projectType: "Freelance",
       title: "Desktop Archive Management for Cilandak District Office",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque placeat quia totam repellat atque, optio quidem quo sed quos illum dolores laudantium qui rem aspernatur accusantium quaerat ex omnis?",
-    },
-    {
-      url: "/images/mobile.png",
-      alt: "",
-      projectType: "Freelance",
-      title: "Humanitarian App & Website for CNT IT Corporation",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque placeat quia totam repellat atque, optio quidem quo sed quos illum dolores laudantium qui rem aspernatur accusantium quaerat ex omnis?",
-    },
-    {
-      url: "/images/mobile.png",
-      alt: "",
-      projectType: "Freelance",
-      title: "Humanitarian App & Website for CNT IT Corporation",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque placeat quia totam repellat atque, optio quidem quo sed quos illum dolores laudantium qui rem aspernatur accusantium quaerat ex omnis?",
-    },
-    {
-      url: "/images/mobile.png",
-      alt: "",
-      projectType: "Freelance",
-      title: "Humanitarian App & Website for CNT IT Corporation",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque placeat quia totam repellat atque, optio quidem quo sed quos illum dolores laudantium qui rem aspernatur accusantium quaerat ex omnis?",
     },
@@ -81,9 +58,11 @@ const page = () => {
 
         <section className="flex flex-col gap-8 md:flex-row md:items-center lg:gap-12 mb-16 lg:mb-24">
           <div className="flex justify-center md:w-1/2">
-            <img
+            <Image
               src="/images/js.png"
               alt="Javascript Hoax Detection System Using Machine Learning"
+              width={600}
+              height={400}
               className="w-full rounded-lg object-contain shadow-lg"
             />
           </div>
