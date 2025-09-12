@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
 import { gsap } from "gsap";
-import { TypeAnimation } from "react-type-animation";
 
 const page = () => {
   const router = useRouter();

@@ -12,11 +12,11 @@ const Header = () => {
       <div>
         <ul className="flex text-sm gap-2">
           <li>
-            <a href="#">INA</a>
+            <a href="#">ID</a>
           </li>
           <span>/</span>
           <li>
-            <a href="#">ENG</a>
+            <a href="#">EN</a>
           </li>
         </ul>
       </div>
