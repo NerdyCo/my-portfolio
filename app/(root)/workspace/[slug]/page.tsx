@@ -1,75 +1,25 @@
-"use client";
-
 import Image from "next/image";
 import PortableTextRenderer from "@/components/PortableTextRenderer";
 import WideCard from "@/components/WideCard";
+import { client } from "@/sanity/lib/client";
+import { fullProjectQuery, glimpseProjectQuery } from "@/sanity/lib/queries";
+import { urlFor } from "@/sanity/lib/image";
 
-const page = () => {
-  const hardcodedProjectData = {
-    _id: "example-project",
-    title: "Humanitarian App & Website For CNT IT Corporation",
-    slug: "humanitarian-app-website-for-cnt-it-corporation",
-    startDate: "2023-08-01",
-    endDate: "2023-10-31",
-    tags: ["Flutterflow", "Supabase", "WordPress", "Figma", "Canva"],
-    companyName: "CNT IT Corporation",
-    jobPosition: "Junior Developer",
-    imageBanner: {
-      asset: {
-        _ref: "image-placeholder-12345",
-      },
-    },
-    content: [
-      {
-        _key: "block-1",
-        _type: "block",
-        style: "h2",
-        children: [
-          {
-            _key: "span-1",
-            _type: "span",
-            text: "My Internship Journey At CNT IT Corporation: From Schemas To Humanitarian Apps",
-          },
-        ],
-      },
-      {
-        _key: "block-2",
-        _type: "block",
-        style: "normal",
-        children: [
-          {
-            _key: "span-2",
-            _type: "span",
-            text: "In August 2023, I had The Opportunity To Intern as a Junior Developer at CNT IT Corporation in Bandung, Indonesia. As a Computer Science Student Deeply Passionate about Backend Development And Real-World Impact, This Internship Was More Than Just A Learning Experience - It Has A Chance To Contribute Meaningfully To Something Bigger.",
-          },
-        ],
-      },
-      {
-        _key: "block-3",
-        _type: "block",
-        style: "h2",
-        children: [
-          {
-            _key: "span-3",
-            _type: "span",
-            text: "Building Tech With Purpose: A Humanitarian Mobile App",
-          },
-        ],
-      },
-      {
-        _key: "block-4",
-        _type: "block",
-        style: "normal",
-        children: [
-          {
-            _key: "span-4",
-            _type: "span",
-            text: "One Of My Main Responsibilities Was To Help Develop A Mobile Application For Humanitarian Services. This Wasn't Just Another CRUD App, The Real Aim Is To Create A Platform That Connects People In Need With The Right Help. I Used Flutterflow, A Visual App Builder Based On Flutter, To Build And Prototype The Android App Efficiently. It Was My First Time Using Flutterflow, But Thanks To Its Intuitive Interface And Component System, I Quickly Got The Hang of It. Just Shout Out To Me For My Knowledge About Test Driven Development, So Here I Am.",
-          },
-        ],
-      },
-    ],
+interface PageProps {
+  params: {
+    slug: string;
   };
+}
+
+const page = async ({ params }: PageProps) => {
+  const slug = params.slug;
+  const project = await client.fetch(fullProjectQuery, { slug });
+  const allProjects = await client.fetch(glimpseProjectQuery);
+  const otherProjects = allProjects.filter((other: any) => other.slug !== slug);
+
+  if (!project) {
+    return <div>Project not found</div>;
+  }
 
   const {
     title,
@@ -80,7 +30,7 @@ const page = () => {
     jobPosition,
     imageBanner,
     content,
-  } = hardcodedProjectData;
+  } = project;
 
   const formatDate = (dateString: string): string => {
     if (!dateString) return "";
@@ -118,7 +68,7 @@ const page = () => {
           {title}
         </h1>
         <div className="flex flex-wrap gap-2 my-10 justify-center items-center">
-          {tags.map((tag) => (
+          {tags.map((tag: string) => (
             <span
               key={tag}
               className="py-1 px-3 bg-black text-sm text-white rounded-xl text-center"
@@ -142,7 +92,14 @@ const page = () => {
           <div>
             <h4 className="text-gray-500 text-sm mb-2">Company</h4>
             <p className="text-black text-sm md:text-base">
-              {companyName} <span className="font-bold">AS</span> {jobPosition}
+              {companyName && jobPosition ? (
+                <>
+                  {companyName} <span className="font-bold">AS</span>{" "}
+                  {jobPosition}
+                </>
+              ) : (
+                "Personal Project"
+              )}
             </p>
           </div>
           <div>
@@ -163,17 +120,24 @@ const page = () => {
             Other Projects
           </h3>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map(
-              ({ url, alt, projectType, title, description }, index) => (
-                <WideCard
-                  key={index}
-                  url={url}
-                  alt={alt}
-                  projectType={projectType}
-                  title={title}
-                  description={description}
-                />
-              )
+            {otherProjects.length > 0 ? (
+              otherProjects
+                .slice(0, 3)
+                .map((project: any) => (
+                  <WideCard
+                    key={project._id}
+                    url={urlFor(project.imageBanner).url()}
+                    alt={project.imageBanner?.alt || project.title}
+                    projectType={project.projectType}
+                    title={project.title}
+                    description={project.shortDescription}
+                    detailUrl={`/workspace/${project.slug}`}
+                  />
+                ))
+            ) : (
+              <p className="text-gray-500 text-center col-span-full">
+                No other projects to display.
+              </p>
             )}
           </div>
         </section>

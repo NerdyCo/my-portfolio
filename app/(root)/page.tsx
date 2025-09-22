@@ -1,36 +1,16 @@
 "use client";
 
-import { useRef } from "react";
 import { useRouter } from "next/navigation";
-import { gsap } from "gsap";
 
 const page = () => {
   const router = useRouter();
-  const curtainRef = useRef(null);
-
-  const animateCurtain = (onComplete: () => void) => {
-    gsap.to(curtainRef.current, {
-      width: "100%",
-      duration: 0.8,
-      ease: "power2.inOut",
-      onComplete: onComplete,
-    });
-  };
 
   const handleExploreClick = () => {
-    animateCurtain(() => {
-      router.push("/workspace");
-    });
+    router.push("/workspace");
   };
 
   return (
     <>
-      <div
-        ref={curtainRef}
-        className="fixed top-0 left-0 h-screen bg-black z-50"
-        style={{ width: "0%" }}
-      ></div>
-
       <main className="flex flex-1 flex-col items-center justify-center">
         <h1 className="text-center text-4xl font-bold leading-tight md:text-6xl lg:text-7xl">
           Hi, I'm Teguh. I'm a coder

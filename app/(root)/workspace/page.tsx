@@ -1,28 +1,17 @@
-// "use client";
+"use client";
 
-// import { useRef, useEffect } from "react";
-// import { gsap } from "gsap";
 import WideCard from "@/components/WideCard";
 import Footer from "@/components/Footer";
 import FeaturedProject from "@/components/FeaturedProject";
-import { client } from "@/sanity/lib/client";
-import { glimpseProjectQuery } from "@/sanity/lib/queries";
+import { useProjects } from "@/hooks/useProjects";
 import { urlFor } from "@/sanity/lib/image";
 
-const page = async () => {
-  // const curtainRef = useRef(null);
-  const projects = await client.fetch(glimpseProjectQuery);
+const page = () => {
+  const { projects, loading } = useProjects();
   const featuredProject = projects[0];
   const otherProjects = projects.slice(1);
 
-  // useEffect(() => {
-  //   gsap.to(curtainRef.current, {
-  //     width: "0%",
-  //     duration: 0.8,
-  //     ease: "power2.inOut",
-  //     delay: 0.2,
-  //   });
-  // }, []);
+  if (loading) return <div>Loading...</div>;
 
   // const projects = [
   //   {
@@ -45,12 +34,6 @@ const page = async () => {
 
   return (
     <>
-      {/* <div
-        ref={curtainRef}
-        className="fixed top-0 right-0 h-screen bg-black z-50"
-        style={{ width: "100%" }}
-      ></div> */}
-
       <main className="mx-auto flex w-full max-w-7xl flex-col mb-10 lg:mb-16">
         <section className="mb-6 lg:mb-12">
           <h4 className="text-gray-500 text-xs md:text-sm lg:text-base font-semibold mb-2">
@@ -72,18 +55,25 @@ const page = async () => {
           />
         </section>
 
-        {/* <section className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {otherProjects.map((project: any) => (
-            <WideCard
-              key={project._id}
-              url={project.imageBanner || "/images/avatar.jpg"}
-              alt={project.title}
-              projectType={project.projectType}
-              title={project.title}
-              description={project.shortDescription}
-            />
-          ))}
-        </section> */}
+        <section className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {otherProjects.length > 0 ? (
+            otherProjects.map((project: any) => (
+              <WideCard
+                key={project._id}
+                url={urlFor(project.imageBanner).url()}
+                alt={project.imageBanner?.alt || project.title}
+                projectType={project.projectType}
+                title={project.title}
+                description={project.shortDescription}
+                detailUrl={`/workspace/${project.slug}`}
+              />
+            ))
+          ) : (
+            <p className="text-gray-500 text-center col-span-full">
+              There are no other projects to display.
+            </p>
+          )}
+        </section>
       </main>
 
       <Footer />
