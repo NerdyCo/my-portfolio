@@ -1,25 +1,37 @@
+"use client";
+
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 const Header = () => {
+  const router = useRouter();
+
+  const handleHomeClick = () => {
+    router.push("/");
+  };
+
   return (
     <header className="flex flex-row justify-between py-8 md:py-12">
       <div>
-        <img
-          width="24"
-          height="24"
-          src="https://img.icons8.com/material-outlined/24/pixel-cat.png"
-          alt="pixel-cat"
-        />
+        <Link href="/">
+          <img
+            width="24"
+            height="24"
+            src="https://img.icons8.com/material-outlined/24/pixel-cat.png"
+            alt="pixel-cat"
+          />
+        </Link>
       </div>
-      <div>
-        <ul className="flex text-sm gap-2">
+      <nav>
+        <ul className="flex text-sm gap-4">
           <li>
-            <a href="#">ID</a>
+            <Link href="/about">ABOUT</Link>
           </li>
-          <span>/</span>
           <li>
-            <a href="#">EN</a>
+            <Link href="/project">PROJECTS</Link>
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
   );
 };

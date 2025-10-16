@@ -14,6 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={robotoMono.variable}>
+      <head>
+        <title>Portfolio</title>
+      </head>
       <body>{children}</body>
     </html>
   );

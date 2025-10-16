@@ -1,27 +1,19 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-
 const page = () => {
-  const router = useRouter();
-
-  const handleExploreClick = () => {
-    router.push("/workspace");
-  };
-
   return (
     <>
       <main className="flex flex-1 flex-col items-center justify-center">
-        <h1 className="text-center text-4xl font-bold leading-tight md:text-6xl lg:text-7xl">
-          Hi, I'm Teguh. I'm a coder
+        <h1 className="text-left text-4xl font-normal leading-tight md:text-5xl lg:text-7xl">
+          Hi, I'm Teguh. <br /> A Developer & Web Designer.
         </h1>
+        <h2>
+          I build custom websites that blend sleek design with robust
+          functionality. Using Laravel, Next.js, Figma, and Spring Boot, I
+          deliver scalable digital experiences tailored to each client's vision.
+        </h2>
 
-        <button
-          onClick={handleExploreClick}
-          className="mt-16 border border-foreground py-2 px-9 text-sm font-medium uppercase tracking-widest transition-colors duration-300 hover:bg-foreground hover:text-background md:mt-24 hover:cursor-pointer"
-        >
-          Explore
-        </button>
+        <footer>
+          <p>Built with Next.js, designed in Figma, driven by creativity.</p>
+        </footer>
       </main>
     </>
   );
