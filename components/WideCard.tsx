@@ -1,7 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const WideCard = ({ url, alt, projectType, title, description }: any) => {
+interface WideCardProps {
+  url: string;
+  alt: string;
+  projectType: string;
+  title: string;
+  description: string;
+  detailUrl: string;
+}
+
+const WideCard = ({
+  url,
+  alt,
+  projectType,
+  title,
+  description,
+  detailUrl,
+}: WideCardProps) => {
   return (
     <div className="flex flex-col mb-5">
       <div>
@@ -20,7 +36,7 @@ const WideCard = ({ url, alt, projectType, title, description }: any) => {
         </div>
         <div className="mt-5 flex flex-col gap-4">
           <p className="text-sm/relaxed">{description}</p>
-          <Link href={"#"} className="text-sm underline">
+          <Link href={detailUrl} className="text-sm underline">
             View Details
           </Link>
         </div>

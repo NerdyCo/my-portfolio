@@ -5,17 +5,17 @@ import { client } from "@/sanity/lib/client";
 import { fullProjectQuery, glimpseProjectQuery } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
-
-const page = async ({ params }: PageProps) => {
-  const slug = params.slug;
+const SpecificProjectPage = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) => {
+  const { slug } = await params;
   const project = await client.fetch(fullProjectQuery, { slug });
   const allProjects = await client.fetch(glimpseProjectQuery);
-  const otherProjects = allProjects.filter((other: any) => other.slug !== slug);
+  const otherProjects = allProjects.filter(
+    (other: { slug: string }) => other.slug !== slug
+  );
 
   if (!project) {
     return <div>Project not found</div>;
@@ -146,4 +146,4 @@ const page = async ({ params }: PageProps) => {
   );
 };
 
-export default page;
+export default SpecificProjectPage;

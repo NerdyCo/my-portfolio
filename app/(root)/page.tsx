@@ -1,22 +1,25 @@
-const page = () => {
+const MainPage = () => {
   return (
     <>
-      <main className="flex flex-1 flex-col items-center justify-center">
-        <h1 className="text-left text-4xl font-normal leading-tight md:text-5xl lg:text-7xl">
-          Hi, I'm Teguh. <br /> A Developer & Web Designer.
+      <main className="flex flex-1 flex-col items-center mt-12 md:mt-14 xl:mt-28 gap-6">
+        <h1 className="text-left text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-tight ">
+          Hi, I&apos;m Teguh. <br /> A Developer & Web Designer.
         </h1>
-        <h2>
+        <p className="text-sm md:text-base xl:text-xl leading-relaxed">
           I build custom websites that blend sleek design with robust
           functionality. Using Laravel, Next.js, Figma, and Spring Boot, I
-          deliver scalable digital experiences tailored to each client's vision.
-        </h2>
-
-        <footer>
-          <p>Built with Next.js, designed in Figma, driven by creativity.</p>
-        </footer>
+          deliver scalable digital experiences tailored to each client&apos;s
+          vision.
+        </p>
       </main>
+
+      <footer>
+        <p className="text-xs text-center mb-8">
+          Built with Next.js, designed in Figma, driven by creativity.
+        </p>
+      </footer>
     </>
   );
 };
 
-export default page;
+export default MainPage;

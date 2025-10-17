@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { client } from "@/sanity/lib/client";
 import { glimpseProjectQuery } from "@/sanity/lib/queries";
+import { SanityProject } from "@/types";
 
 export const useProjects = () => {
-  const [projects, setProjects] = useState<any[]>([]);
+  const [projects, setProjects] = useState<SanityProject[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

@@ -1,20 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 const Header = () => {
-  const router = useRouter();
-
-  const handleHomeClick = () => {
-    router.push("/");
-  };
-
   return (
     <header className="flex flex-row justify-between py-8 md:py-12">
       <div>
         <Link href="/">
-          <img
+          <Image
             width="24"
             height="24"
             src="https://img.icons8.com/material-outlined/24/pixel-cat.png"

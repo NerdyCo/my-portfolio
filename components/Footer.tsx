@@ -10,14 +10,14 @@ const Footer = () => {
             Wanna team up?
           </h2>
           <p className="text-gray-300 text-sm">
-            Curious who's behind the code? Glimpse my journey through
+            Curious who&apos;s behind the code? Glimpse my journey through
             <span className="ml-1">
               <Link
                 href="./pdf/CV_KautsarTeguh.pdf"
                 className="underline hover:text-gray-200"
                 download={true}
               >
-                my CV.
+                my Resume.
               </Link>
             </span>
           </p>
@@ -30,7 +30,7 @@ const Footer = () => {
               className="p-3 bg-gray-700/50 text-xs md:text-sm text-white rounded-xl border border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400 placeholder-gray-400 w-full"
             />
             <button className="flex flex-row justify-center items-center gap-2 whitespace-nowrap text-xs bg-white hover:bg-gray-100 text-gray-900 font-semibold py-3 px-4 rounded-xl transition duration-300 ease-in-out">
-              Let's Talk{" "}
+              Let&apos;s Talk{" "}
               <span>
                 <Send strokeWidth={1} height={16} width={16} />
               </span>

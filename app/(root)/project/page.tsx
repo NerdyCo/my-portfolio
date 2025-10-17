@@ -5,9 +5,11 @@ import Footer from "@/components/Footer";
 import FeaturedProject from "@/components/FeaturedProject";
 import { useProjects } from "@/hooks/useProjects";
 import { urlFor } from "@/sanity/lib/image";
+import { SanityProject } from "@/types";
 
-const page = () => {
-  const { projects, loading } = useProjects();
+const ProjectPage = () => {
+  const { projects, loading }: { projects: SanityProject[]; loading: boolean } =
+    useProjects();
   const featuredProject = projects[0];
   const otherProjects = projects.slice(1);
 
@@ -37,9 +39,9 @@ const page = () => {
       <main className="mx-auto flex w-full max-w-7xl flex-col mb-10 lg:mb-16">
         <section className="mb-6 lg:mb-12">
           <h4 className="text-gray-500 text-xs md:text-sm lg:text-base font-semibold mb-2">
-            What I've done as
+            What I&apos;ve done as
           </h4>
-          <h1 className="text-black text-3xl font-bold uppercase md:text-4xl lg:text-5xl">
+          <h1 className="text-black text-3xl font-semibold uppercase md:text-4xl lg:text-5xl">
             Junior Developer
           </h1>
         </section>
@@ -47,7 +49,7 @@ const page = () => {
         <section className="flex flex-col gap-8 md:flex-row md:items-center lg:gap-12 mb-16 lg:mb-24">
           <FeaturedProject
             imageUrl={urlFor(featuredProject.imageBanner).url()}
-            imageAlt={featuredProject.imageBanner.alt}
+            imageAlt={featuredProject.imageBanner.alt || featuredProject.title}
             projectType={featuredProject.projectType}
             title={featuredProject.title}
             shortDescription={featuredProject.shortDescription}
@@ -81,4 +83,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProjectPage;
