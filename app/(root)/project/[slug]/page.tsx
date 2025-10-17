@@ -42,25 +42,6 @@ const SpecificProjectPage = async ({
     return date.toLocaleDateString("en-US", options);
   };
 
-  const projects = [
-    {
-      url: "/images/java.png",
-      alt: "",
-      projectType: "Freelance",
-      title: "Desktop Archive Management for Cilandak District Office",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque placeat quia totam repellat atque, optio quidem quo sed quos illum dolores laudantium qui rem aspernatur accusantium quaerat ex omnis?",
-    },
-    {
-      url: "/images/mobile.png",
-      alt: "",
-      projectType: "Freelance",
-      title: "Humanitarian App & Website for CNT IT Corporation",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eaque placeat quia totam repellat atque, optio quidem quo sed quos illum dolores laudantium qui rem aspernatur accusantium quaerat ex omnis?",
-    },
-  ];
-
   return (
     <main>
       <section className="mb-5">
@@ -79,16 +60,16 @@ const SpecificProjectPage = async ({
         </div>
         <div className="h-[220px] md:h-[300px] lg:h-[500px] xl:h-[600px] w-full relative">
           <Image
-            src="/images/mobile.png"
-            alt="Banner"
+            src={urlFor(imageBanner).url()}
+            alt={imageBanner?.alt || title}
             fill
             className="rounded-xl object-cover"
           />
         </div>
       </section>
 
-      <section className="lg:flex lg:flex-row lg:gap-12 mb-12 lg:mt-12">
-        <div className="flex flex-row lg:flex-col max-lg:justify-between gap-5 mb-10">
+      <section className="lg:flex lg:flex-col lg:gap-12 mb-12 lg:mt-12">
+        <div className="flex flex-row justify-between gap-5 mb-10">
           <div>
             <h4 className="text-gray-500 text-sm mb-2">Company</h4>
             <p className="text-black text-sm md:text-base">
@@ -109,7 +90,7 @@ const SpecificProjectPage = async ({
             </p>
           </div>
         </div>
-        <div className="prose md:prose-lg">
+        <div className="prose md:prose-lg w-full max-w-none">
           <PortableTextRenderer content={content} />
         </div>
       </section>

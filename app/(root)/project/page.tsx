@@ -53,7 +53,7 @@ const ProjectPage = () => {
             projectType={featuredProject.projectType}
             title={featuredProject.title}
             shortDescription={featuredProject.shortDescription}
-            detailUrl={`/workspace/${featuredProject.slug}`}
+            detailUrl={`/project/${featuredProject.slug}`}
           />
         </section>
 

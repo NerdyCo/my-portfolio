@@ -17,7 +17,7 @@ const Footer = () => {
                 className="underline hover:text-gray-200"
                 download={true}
               >
-                my Resume.
+                my RESUME.
               </Link>
             </span>
           </p>
