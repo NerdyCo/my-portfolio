@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+
   return (
     <header className="flex flex-row justify-between py-8 md:py-12">
       <div>
@@ -17,12 +20,15 @@ const Header = () => {
         </Link>
       </div>
       <nav>
-        <ul className="flex text-sm gap-4">
+        <ul className="flex text-sm gap-6">
+          <li>{/* <Link href="/about">ABOUT</Link> */}</li>
           <li>
-            <Link href="/about">ABOUT</Link>
-          </li>
-          <li>
-            <Link href="/project">PROJECTS</Link>
+            <Link
+              href="/project"
+              className={pathname === "/project" ? "font-bold" : ""}
+            >
+              PROJECTS
+            </Link>
           </li>
         </ul>
       </nav>

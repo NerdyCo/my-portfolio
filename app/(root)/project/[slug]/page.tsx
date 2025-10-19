@@ -95,8 +95,8 @@ const SpecificProjectPage = async ({
         </div>
       </section>
 
-      <div className="bg-gray-200/50 -mx-8 sm:-mx-12 md:-mx-16 lg:-mx-20 xl:-mx-32 py-8">
-        <section className="px-8 sm:px-12 md:px-16 lg:px-20">
+      <div className="bg-gray-200/50 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12 xl:-mx-16 py-8">
+        <section className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <h3 className="text-black text-3xl font-bold mb-10">
             Other Projects
           </h3>
@@ -116,7 +116,7 @@ const SpecificProjectPage = async ({
                   />
                 ))
             ) : (
-              <p className="text-gray-500 text-center col-span-full">
+              <p className="text-gray-500 text-center col-span-full mt-16">
                 No other projects to display.
               </p>
             )}

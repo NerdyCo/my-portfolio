@@ -58,23 +58,17 @@ const ProjectPage = () => {
         </section>
 
         <section className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {otherProjects.length > 0 ? (
-            otherProjects.map((project: any) => (
-              <WideCard
-                key={project._id}
-                url={urlFor(project.imageBanner).url()}
-                alt={project.imageBanner?.alt || project.title}
-                projectType={project.projectType}
-                title={project.title}
-                description={project.shortDescription}
-                detailUrl={`/workspace/${project.slug}`}
-              />
-            ))
-          ) : (
-            <p className="text-gray-500 text-center col-span-full">
-              There are no other projects to display.
-            </p>
-          )}
+          {otherProjects.map((project: any) => (
+            <WideCard
+              key={project._id}
+              url={urlFor(project.imageBanner).url()}
+              alt={project.imageBanner?.alt || project.title}
+              projectType={project.projectType}
+              title={project.title}
+              description={project.shortDescription}
+              detailUrl={`/workspace/${project.slug}`}
+            />
+          ))}
         </section>
       </main>
 
